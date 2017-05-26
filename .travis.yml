@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy: https://young-sierra-94572.herokuapp.com/
+  provider: heroku
+  api_key:
+    secure: iwoCHcmTPDV93zmxhZSe3icDXrLs9J7FD+tHv0pHYeXH8FhyGweNfy7poQXTvdkbYRHzLWO6lJNlMqk7Qv4L28fIw4BJHQpMMmzaZDucHInXyknAoJwqRQ94CffGG+pR5GUBUNAVO8O2Gkb+a86s72MyaC3p+SvM1VM3sOh7qHMpuFy0D7Tzy1TQRHa16JXLqmvmugJj+wCSIMwF0TzpDdCgfWMj/Tf/IR/IQWj4W2ygZ8WaEJr3kBDCZvtyoGQhtxjVrQdCFaaUoePcq6TMwhftax8VPD9YxRdvyfiYe+wXOwXvWI0MeaY/LwcZCHJwl8Bknnt5D8IvgL5cr+4NAO3sG7Oqw6vS2QtfIWw6KgymZufdzdtwnxwLzwg2z8BBZRhZYln0tYOajUNrnsiEEIDlM2MUoEb8Juk9sc2Ic1XuZE1sO3S0i/T7oaZ8HN7d08Pbn5W2X1Oetu4OxEHN5sFIEaXUwce/XX6bUtHxl1YKXnZwHpmjslGRTfx4VFsMLMMUGSf0Zy77pXG6w+9lDWvDebO3nkcE1bOS4lEUYnxANiP07rVm3g6HYybBmnFsY1msI3bVlohRfM+9NHrIGVMbb2ojidmh6YDt8ZDwAWumd0ZKQP30PnQFtwMJzHgxadyaUPQ++AvZ5Fmj/9iJTn1O51rc+XXEotoxLrwEBTA=
+  app: shoppingRecipeTest
+  on:
+    repo: LazyPupp/shoppingRecipeTest
