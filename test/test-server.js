@@ -178,4 +178,38 @@ describe('recipesTest', function(){
       res.body.ingredients.length.should.be.at.least(1);
     });
   });
+  it('should update item on put',function(){
+    const newObj = {name:"human",ingredients:['mommy','daddy','No Love']};
+    return chai.request(app)
+    .get('/recipes')
+    .then(res=>{
+      newObj.id = res.body[0].id;
+      return chai.request(app)
+      .put(`/recipes/${newObj.id}`)
+      .send(newObj);
+    })
+    .then(res=>{
+      res.should.have.status(200);
+      res.should.be.json;
+      res.body.id.should.not.be.null;
+      res.body.should.be.a('object');
+      res.body.should.include.keys('id','name','ingredients');
+      res.body.should.deep.equal(newObj);
+      res.body.name.should.not.be.null;
+      res.body.name.should.not.be.undefined;
+      res.body.ingredients.length.should.be.at.least(1);
+    });
+  });
+  it('should delete item on delete',function(){
+    return chai.request(app)
+    .get('/recipes')
+    .then(res=>{
+      const objId = res.body[0].id;
+      return chai.request(app)
+      .delete( `/recipes/${objId}`);
+    })
+    .then(res=>{
+      res.should.have.status(204);
+    });
+  });
 });
